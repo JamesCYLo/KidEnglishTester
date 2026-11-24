@@ -1,0 +1,52 @@
+<style>
+  #word-adventure-mockup { font-family: ui-rounded, "Nunito", "Microsoft JhengHei", sans-serif; color: light-dark(#17324d,#ecf7ff); }
+  #word-adventure-mockup .screen { box-sizing:border-box; min-height:500px; padding:24px; border-radius:28px; background:light-dark(#eefaff,#10243a); overflow:hidden; }
+  #word-adventure-mockup .top { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  #word-adventure-mockup .brand { font-size:22px; font-weight:800; color:light-dark(#156f9b,#7cddff); }
+  #word-adventure-mockup .pill { background:light-dark(#fff6ca,#45370c); padding:9px 14px; border-radius:999px; font-weight:700; }
+  #word-adventure-mockup .hero { text-align:center; padding:32px 12px 18px; }
+  #word-adventure-mockup h1 { font-size:30px; margin:0 0 8px; }
+  #word-adventure-mockup .sub { margin:0; font-size:17px; color:light-dark(#42647b,#bdd4e4); }
+  #word-adventure-mockup .map { display:grid; grid-template-columns:repeat(4,1fr); max-width:580px; margin:26px auto; gap:12px; align-items:center; }
+  #word-adventure-mockup .level { aspect-ratio:1; min-height:72px; border:0; border-radius:22px; font:inherit; font-size:27px; font-weight:800; background:light-dark(#fff,#203b56); color:inherit; box-shadow:0 5px 0 light-dark(#b7d8e8,#091a2b); }
+  #word-adventure-mockup .level.active { background:light-dark(#ffcf4b,#e89d00); color:#4b3100; transform:translateY(-3px); }
+  #word-adventure-mockup .level.done { background:light-dark(#9de6aa,#247e42); color:light-dark(#174c24,#fff); }
+  #word-adventure-mockup .modes { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; max-width:740px; margin:auto; }
+  #word-adventure-mockup .mode { padding:15px 10px; border-radius:18px; text-align:center; background:light-dark(#fff,#1c354d); font-size:16px; font-weight:700; }
+  #word-adventure-mockup .mode span { display:block; font-size:30px; margin-bottom:5px; }
+  #word-adventure-mockup .parent { max-width:850px; margin:22px auto; background:light-dark(#fff,#172d43); border-radius:22px; padding:20px; }
+  #word-adventure-mockup .parent-head { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+  #word-adventure-mockup .parent h1 { font-size:26px; }
+  #word-adventure-mockup .action { border:0; border-radius:14px; padding:12px 17px; background:light-dark(#126a98,#56c6ef); color:light-dark(#fff,#06202e); font:inherit; font-weight:800; }
+  #word-adventure-mockup .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:20px 0; }
+  #word-adventure-mockup .stat { padding:16px; border-radius:16px; background:light-dark(#e8f6ff,#213c55); }
+  #word-adventure-mockup .stat b { font-size:27px; display:block; }
+  #word-adventure-mockup table { width:100%; border-collapse:collapse; text-align:left; }
+  #word-adventure-mockup th,#word-adventure-mockup td { padding:11px 5px; border-bottom:1px solid light-dark(#d8e6ed,#36516a); }
+  #word-adventure-mockup .small { font-size:14px; color:light-dark(#587386,#b5c9d7); }
+  @media(max-width:520px) { #word-adventure-mockup .screen{padding:16px;min-height:540px} #word-adventure-mockup .map{grid-template-columns:repeat(3,1fr)} #word-adventure-mockup .modes{grid-template-columns:repeat(2,1fr)} #word-adventure-mockup .stats{grid-template-columns:1fr} #word-adventure-mockup .parent{padding:15px} }
+</style>
+<div id="word-adventure-mockup">
+  <div class="viz-carousel" aria-label="單字冒險介面草圖" data-previous-label="上一個" data-next-label="下一個">
+    <section data-variant="孩子冒險地圖" aria-label="孩子練習首頁">
+      <main class="screen">
+        <div class="top"><div class="brand">🌈 單字冒險島</div><div class="pill">⭐ 28 顆　小宇</div></div>
+        <div class="hero"><h1>今天要挑戰哪一關？</h1><p class="sub">完成 3 題就能拿星星！</p></div>
+        <div class="map" aria-label="關卡地圖">
+          <button class="level done" type="button" aria-label="第一關已完成">★</button><button class="level done" type="button" aria-label="第二關已完成">★</button><button class="level active" type="button" aria-label="開始第三關">3</button><button class="level" type="button" aria-label="第四關鎖定">🔒</button><button class="level" type="button">🔒</button><button class="level" type="button">🔒</button><button class="level" type="button">🔒</button><button class="level" type="button">🏆</button>
+        </div>
+        <div class="modes" aria-label="可選練習遊戲"><div class="mode"><span>🖼️</span>看圖選字</div><div class="mode"><span>🔊</span>聽音選答</div><div class="mode"><span>🔤</span>點字母拼字</div><div class="mode"><span>中 ↔ 英</span>中英選答</div><div class="mode"><span>🃏</span>記憶配對</div><div class="mode"><span>🔁</span>錯題複習</div></div>
+      </main>
+    </section>
+    <section data-variant="家長管理" aria-label="家長管理畫面" hidden>
+      <main class="screen">
+        <div class="top"><div class="brand">🌈 單字冒險島</div><div class="pill">家長模式 🔐</div></div>
+        <section class="parent" aria-label="家長儀表板">
+          <div class="parent-head"><div><h1>小宇的學習紀錄</h1><p class="sub">本週表現與需要複習的單字</p></div><button class="action" type="button">＋ 新增單字</button></div>
+          <div class="stats"><div class="stat"><span class="small">累積星星</span><b>⭐ 28</b></div><div class="stat"><span class="small">本週完成</span><b>4 關</b></div><div class="stat"><span class="small">答對率</span><b>86%</b></div></div>
+          <table aria-label="錯題複習清單"><thead><tr><th>需要複習</th><th>中文</th><th>錯誤次數</th><th></th></tr></thead><tbody><tr><td>elephant</td><td>大象</td><td>3</td><td><button class="action" type="button">加入複習</button></td></tr><tr><td>cloudy</td><td>多雲的</td><td>2</td><td><button class="action" type="button">加入複習</button></td></tr></tbody></table>
+        </section>
+      </main>
+    </section>
+  </div>
+</div>
